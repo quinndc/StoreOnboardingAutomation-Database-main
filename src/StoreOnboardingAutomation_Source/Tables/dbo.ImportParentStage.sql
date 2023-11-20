@@ -1,0 +1,11 @@
+CREATE TABLE [dbo].[ImportParentStage](
+	[pkImportParentStageID] [int] IDENTITY(1,1) NOT NULL,
+	[ParentStageName] [varchar](100) NULL,
+ CONSTRAINT [PK_ImportParentStage] PRIMARY KEY CLUSTERED 
+(
+	[pkImportParentStageID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+

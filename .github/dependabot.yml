@@ -1,0 +1,19 @@
+version: 2
+registries:
+  dcgithub:
+    type: nuget-feed
+    url: https://nuget.pkg.github.com/drivevelocity/index.json
+    token: ${{ secrets.GITHUBPACKAGES_TOKEN }}
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    labels:
+      - "devops"
+
+  - package-ecosystem: "nuget"
+    directory: "/"
+    registries: "*"
+    schedule:
+      interval: "weekly"

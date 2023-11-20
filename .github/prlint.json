@@ -1,0 +1,15 @@
+{
+    "title": [
+      {
+        "pattern": "^[A-Za-z0-9]{1,10}-\\d+",
+        "message": "Your title needs to be prefixed with a JIRA story"
+      }
+    ],
+    "body": [
+      {
+        "pattern": "browse/[A-Za-z0-9]{1,10}-\\d+",
+        "flags": ["i"],
+        "message": "You need a JIRA link in your description"
+      }
+    ]
+  }

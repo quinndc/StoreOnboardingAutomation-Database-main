@@ -1,0 +1,20 @@
+name: StoreOnboardingAutomation-Database Build
+on:
+  page_build:
+  pull_request:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - develop
+      - release/*
+      - hotfix/*
+jobs:
+  build:
+    uses: drivevelocity/private-github-action-library/.github/workflows/reusable-db-build.yml@main
+    with:
+      DATABASE_NAME: StoreOnboardingAutomation
+      OCTOPUS_PROJECT: StoreOnboardingAutomation SCA
+    secrets:
+      GITHUBACTIONS_PAL_TOKEN: ${{ secrets.GITHUBACTIONS_PAL_TOKEN }}
+      OCTOPUSAPIKEY_SAAS: ${{ secrets.OCTOPUSAPIKEY_SAAS }}
